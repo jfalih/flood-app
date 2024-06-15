@@ -1,13 +1,17 @@
 class Urls {
-  static String baseUrl = 'https://localhost:8080/api';
-  static String registrationUrl = '$baseUrl/registration';
-  static String loginUrl = '$baseUrl/login';
-  static String createTaskUrl = '$baseUrl/createTask';
-  static String newTaskUrl = '$baseUrl/listTaskByStatus/New';
-  static String completedTaskUrl = '$baseUrl/listTaskByStatus/Completed';
-  static String canceledTaskUrl = '$baseUrl/listTaskByStatus/Canceled';
-  static String progressTaskUrl = '$baseUrl/listTaskByStatus/Progress';
+  static String baseUrl = 'http://flood.asia/api';
+  static String assetUrl = 'http://flood.asia/storage/images/';
+  static String registrationUrl = '$baseUrl/auth/register';
+  static String loginUrl = '$baseUrl/auth/login';
+  static String placesUrl = '$baseUrl/places';
+  static String historyUrl = '$baseUrl/history';
+  static String placesRecommendationUrl = '$baseUrl/places/recommendation';
+  static String bookingUrl(String id) => '$baseUrl/booking/$id';
+  static String receiptUrl(String id) => '$baseUrl/receipt/$id';
+  static String categoryUrl = '$baseUrl/categories';
 
+  static String detailCategory(String id) => '$baseUrl/category/$id/places';
+  
   static String changeStatus(String taskId, String status) =>
       '$baseUrl/updateTaskStatus/$taskId/$status';
 
